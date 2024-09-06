@@ -1,4 +1,52 @@
 @import "./styles//Abstract/Variables";
+@import "./styles//Abstract/Mixins";
+
+//Navigation
 @import "./styles/Navigation/Navigation";
+
+//Global
 @import "./styles/Global/GlobalStyles";
 
+//Hero Section
+@import "./styles/HeroSection/HeroSec";
+
+//Services
+@import "./styles/Services/ServiceSec";
+@import "./styles/Services/SingleService";
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 8px rgba(230, 125, 34, 0.5);
+    color: $textColor;
+  }
+
+li {
+    list-style: none;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    @media screen and (max-width: $breakpoint-medium) {
+      font-size: 80%;
+    }
+}
+
+body{
+  background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+  color: $textColor;
+}

@@ -1,0 +1,48 @@
+//https://www.thecleaningpeopleri.com/
+
+.heroContainer {
+    height: 100vh;
+    width: 100vw;
+    padding: $defaultPaddingSection;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    &-content{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        min-height: 12rem;
+        width: 80vw;
+        background-color: #ffffffcc;
+        padding: 2rem;
+        border-radius: 3px;
+        text-align: center;
+
+        .heroContainer-text{
+            font-size: 1.6rem;
+            color: $textColor;
+        }
+    }
+}
+
+.background-img{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(0.5px); 
+    z-index: -1;
+}
+
+.firstImg{
+    background-image: url('https://cdn.mos.cms.futurecdn.net/6ocZN4ABfkREJRjKA48kQM.jpg');
+}
+
+.secondImg{
+    background-image: url('https://www.thespruce.com/thmb/RFQ-I-rQqtpxWeU7jm0sUaYQ8y8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/01.HamptonsModernbyChangoCo.-LivingRoomWideShot-a7c9660092bc4867b2b61feeba247d5c.jpg');
+}
