@@ -3,7 +3,8 @@
     width: 100vw;
     margin-top: 12rem;
     padding: $defaultPaddingSection;
-
+    color: $textColor;
+    
     &-header{
         display: flex;
         flex-direction: column;
@@ -24,6 +25,6 @@
         grid-template-columns: repeat(
             auto-fill, minmax(22rem, 1fr)
         );
-        gap: 1rem;
+        gap: 1.5rem;
     }
 }
