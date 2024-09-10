@@ -18,7 +18,7 @@ export default function Navigation() {
         </div>
 
         <p className='navbar-mobile-btn' onClick={()=>setIsOpenMobile(!isOpenMobile)}>
-          <span class="material-icons">
+          <span className="material-icons">
               menu
           </span>
         </p>

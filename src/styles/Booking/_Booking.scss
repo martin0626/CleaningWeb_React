@@ -1,0 +1,44 @@
+.booking {
+    width: 100%;
+    height: 100vh;
+    padding-inline: $defaultPaddingSection;
+    margin-bottom: 6rem;
+    
+
+    &-content{
+        position: relative;
+        display: flex;
+        justify-content: end;
+        height: 100%;
+        border-radius: 8px 200px 200px 200px;
+        overflow: hidden;
+        box-shadow: $mainShodws;
+    }
+
+    &-form{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        backdrop-filter: blur(72px);
+        justify-content: center;
+        margin: 4rem;
+        border-radius: 0px 200px 200px 200px;
+    }
+}
+
+
+.bookingImg{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 200px 200px 200px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,63 @@
+.process {
+    width: 100%;
+    min-height: 80vh;
+
+
+    &-header {
+        background-color: #fff;
+        width: 32rem;
+        align-self: center;
+        padding: 1rem 1rem;
+        border-radius: 22px;
+        box-shadow: $mainShodws;
+        text-transform: capitalize;
+    }
+
+    &-main{
+       
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: $defaultPaddingSection;
+        margin-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+
+        
+
+        &::after{
+            content: '';
+            background: url("https://www.homilo.com/wp-content/uploads/2022/09/White-living-room-ideas.jpg");
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 75%;
+            width: 100%;
+            z-index: -1;
+
+            @media (max-width:$breakpoint-large){
+                height: 90%;
+            }
+        }
+    }
+
+    &-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        
+        @media (max-width:$breakpoint-large){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+          }
+    }
+}
+

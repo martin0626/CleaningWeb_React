@@ -14,7 +14,13 @@
 @import "./styles/Services/ServiceSec";
 @import "./styles/Services/SingleService";
 
+//Process
+@import "./styles/Process/Process";
+@import "./styles/Process/SingleProcess";
 
+
+//Booking
+@import "./styles/Booking/Booking";
 
 
 * {
@@ -25,7 +31,7 @@
 
 *:focus {
     outline: none;
-    box-shadow: 0 0 0 8px rgba(230, 125, 34, 0.5);
+    // box-shadow: 0 0 0 8px rgba(230, 125, 34, 0.5);
     color: $textColor;
   }
 

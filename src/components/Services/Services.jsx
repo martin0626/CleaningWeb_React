@@ -56,7 +56,7 @@ export default function ServicesContainer(){
                 {
                     services.length > 0 
                         ?
-                        services.map(s=> <SingleService service={s}/>)
+                        services.map(s=> <SingleService key={s.id} service={s}/>)
                         :
                     <h1 className="secondaryHeaderText">No Feautured Services at this point...</h1>
             
