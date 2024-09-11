@@ -5,6 +5,12 @@ import { useState } from 'react'
 export default function Navigation() {
   const [isOpenMobile, setIsOpenMobile] = useState(false);
 
+  const handleOpenNav = ()=>{
+    setIsOpenMobile(!isOpenMobile);
+
+  }
+
+
   return (
     <>
       <nav className='navbar'>
@@ -17,7 +23,7 @@ export default function Navigation() {
           <a href="#contact">Contact</a>
         </div>
 
-        <p className='navbar-mobile-btn' onClick={()=>setIsOpenMobile(!isOpenMobile)}>
+        <p className='navbar-mobile-btn' onClick={handleOpenNav}>
           <span className="material-icons">
               menu
           </span>

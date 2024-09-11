@@ -1,4 +1,5 @@
 import Booking from "./components/Booking/BookingSection"
+import FooterSection from "./components/Contacts/Footer"
 import HeroContainer from "./components/HeroSection/HeroContainer"
 import Navigation from "./components/Navigation/Navigation"
 import ProcessComp from "./components/ProcessSection/ProcessSection"
@@ -13,6 +14,7 @@ function App() {
       <ServicesContainer/>
       <ProcessComp/>
       <Booking/>
+      <FooterSection/>
     </>
   )
 }

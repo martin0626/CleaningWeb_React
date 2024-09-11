@@ -1,0 +1,30 @@
+.footer{
+    min-height: 30vh;
+    margin-top: 16rem;
+    box-shadow: $mainShodws;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1rem;
+    color: $mainColor;
+
+    &-contacts, &-social {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &-social {
+        img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+.footer-singleContact{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
