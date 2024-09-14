@@ -1,42 +1,56 @@
-export default function FooterSection(){
+import RateComponent from "./Rate";
+
+export default function FooterSection({onOpenModal}){
+
+    const handleCopy = (e)=>{
+        const data = e.target.textContent
+
+        navigator.clipboard.writeText(data).then(function() {
+            alert('Copied to clipboard!');
+        }).catch(function(error) {
+            console.error('Error copying text: ', error);
+        });
+    }
+
     return(
         <section className="footer">
             <div className="footer-contacts">
-                <h3>Contacts</h3>
-                <div className="footer-singleContact">
+                <h2>Contacts</h2>
+                <div onClick={handleCopy} className="footer-singleContact">
                     <span className="material-icons">
                         phone
                     </span>
-                    <p>Phone</p>
+                    <a>0000432010</a>
                 </div>
-                <div className="footer-singleContact">
+                <div onClick={handleCopy} className="footer-singleContact">
                     <span className="material-icons">
                         mail
                     </span>
-                    <p>Email</p>
+                    <a>ivanov_martin2000@abv.bg</a>
                 </div>
-                <div className="footer-singleContact">
+                <div onClick={handleCopy} className="footer-singleContact">
                     <span className="material-icons">
                         pin_drop
                     </span>
-                    <p>Address</p>
+                    <a>Address</a>
                 </div>
             </div>
-            <div className="footer-social">
-                <h3>Social</h3>
+            <div onClick={handleCopy} className="footer-social">
+                <h2>Social</h2>
                 <div className="footer-singleContact">
-                    <img src="https://static.vecteezy.com/system/resources/previews/023/986/999/non_2x/facebook-logo-facebook-logo-transparent-facebook-icon-transparent-free-free-png.png" />
-                    <p>Facebook</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQKrFhY-ljA-u7J5IMWeTv8zmpBx4PP9nQMw&s" />
+                    <a>Facebook</a>
                     
                 </div>
-                <div className="footer-singleContact">
+                <div onClick={handleCopy} className="footer-singleContact">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="instagram" />
-                    <p>Wood.Shop_instagram</p>
+                    <a>Wood.Shop_instagram</a>
                 </div>
             </div>
-            <div className="footer-opinon">
-                <p className="mainBtn"><span>Rate Us</span></p>
+            <div className="footer-opinion footer-social">
+                <h2>Rate Us!</h2>
+                <p onClick={()=>onOpenModal(<RateComponent/>)} className="mainBtn"><span>Rate</span></p>
             </div>
         </section>             
-    )
+    ) 
 }

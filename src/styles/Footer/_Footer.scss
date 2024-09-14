@@ -5,20 +5,45 @@
     padding: 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     font-size: 1rem;
     color: $mainColor;
+
+
+    @media (max-width:$breakpoint-small){
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+
+        .footer-opinion{
+            align-self: center;
+            justify-self: center;
+            grid-column: 1 / 2 span;
+        }
+    }
+
+    h2{
+        border-bottom: 1px solid #33333334;
+        max-width: 18rem;
+    }
+    
 
     &-contacts, &-social {
         display: flex;
         flex-direction: column;
         gap: 16px;
+        font-family: $headersFamily;
     }
 
     &-social {
         img{
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
+    }
+
+    &-opinion{
+        width: 12rem;
+        justify-self: center;
     }
 }
 
@@ -27,4 +52,83 @@
     display: flex;
     gap: 4px;
     align-items: center;
+    padding: 0.2rem 0.6rem;
+    max-width: 18rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: $mainShodws;
+    }
+}
+
+
+
+.rate{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-main{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    h2{
+        font-size: 1.6rem;
+        color: $textHoverColor;
+        border-bottom: 1px solid #33333334;
+    }
+
+    textarea{
+        width: 22rem;
+        resize: none;
+        border: none;
+        box-shadow: $mainShodws;
+        border-radius: 8px;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    &-stars{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+
+        .colored {
+            background: #F8CA00;
+        }
+    }
+
+
+    
+}
+
+.star {
+    width: 4rem;  
+    aspect-ratio: 1;
+    background: #00000041;
+    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%);
+    transition: 0.3s;
+
+    &:hover{
+        background: $mainColor;
+        cursor: pointer;
+        box-shadow: $mainShodws !important;
+    }
+
+    &:hover ~ p{
+        background: $secondary-color;
+        transform: rotate(360deg);
+    }
 }
