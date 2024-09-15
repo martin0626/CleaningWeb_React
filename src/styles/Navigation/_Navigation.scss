@@ -15,7 +15,9 @@
 
 
 .navbar {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,7 +25,12 @@
   height: 72px;
   padding: 0rem 2rem 0rem 2rem;
   background-color: $background-color;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+
 
   &-logo{
     font-weight: bold;
@@ -40,6 +47,7 @@
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    align-items: center;
 
     a{
       transition: all 0.5s;
@@ -66,6 +74,12 @@
   }
 }
 
+.showedNav {
+  transition: all 0.5s;
+  transform: translateY(0%);
+}
+
+
 .navbar-mobile-btn{
   color: $textColor;
   display: none;
@@ -83,6 +97,9 @@
 }
 
 .navbar-mobile-links{
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
   height: 100vh;
   position: absolute;
   z-index: 1000;
@@ -97,14 +114,23 @@
   transition: all 0.5s;
   display: none;
 
+  p{
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+  }
 
   @media (max-width:'600px'){
     display: flex;  
     gap: 2rem;
 
+    
+
     a{
       transition: all 0.5s;
       position: relative;
+      margin-right: 2rem;
 
 
       &::after{
@@ -135,8 +161,6 @@
     width: 100% !important;
   }
 }
-
-
 
 
 

@@ -1,17 +1,18 @@
+import { handleCopy } from "../../helpers";
 import RateComponent from "./Rate";
 
 export default function FooterSection({onOpenModal}){
 
-    const handleCopy = (e)=>{
-        const data = e.target.textContent
+    // const handleCopy = (e)=>{
+    //     const data = e.target.textContent
 
-        navigator.clipboard.writeText(data).then(function() {
-            alert('Copied to clipboard!');
-        }).catch(function(error) {
-            console.error('Error copying text: ', error);
-        });
-    }
-
+    //     navigator.clipboard.writeText(data).then(function() {
+    //         alert('Copied to clipboard!');
+    //     }).catch(function(error) {
+    //         console.error('Error copying text: ', error);
+    //     });
+    // }
+// handleCopy
     return(
         <section className="footer">
             <div className="footer-contacts">

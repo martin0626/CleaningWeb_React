@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 
-export default function HeroContainer(){
+
+const HeroContainer = React.forwardRef((props, ref)=>{
     const [currentImg, setCurrentImg] = useState(true);
 
     useEffect(() => {
@@ -11,7 +12,7 @@ export default function HeroContainer(){
     }, []);
 
     return (
-        <section className="heroContainer">
+        <section ref={ref} className="heroContainer">
             {
                 currentImg 
                     ?
@@ -29,4 +30,6 @@ export default function HeroContainer(){
             </div>
         </section>
     )    
-};
+})
+
+export default HeroContainer;

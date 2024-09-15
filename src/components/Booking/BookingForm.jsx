@@ -15,7 +15,7 @@ export default function BookingForm(){
         <form className="booking-form">
             <h1>Send Us Email</h1>
             <div className="inputEl">
-                <label className={selectedInput === 'name' && 'selectedLabel'} htmlFor="name">Full Name:</label>
+                <label className={selectedInput === 'name' ? 'selectedLabel' : ''} htmlFor="name">Full Name:</label>
                 <input 
                     type="text" 
                     id="name" 
@@ -26,7 +26,7 @@ export default function BookingForm(){
                 />
             </div>
             <div className="inputEl">
-                <label className={selectedInput === 'email' && 'selectedLabel'} htmlFor="email">Email:</label>
+                <label className={selectedInput === 'email' ? 'selectedLabel' : ''} htmlFor="email">Email:</label>
                 <input 
                     type="email" 
                     id="email" 
@@ -37,7 +37,7 @@ export default function BookingForm(){
                 />
             </div>
             <div className="inputEl">
-                <label className={selectedInput === 'phone' && 'selectedLabel'} htmlFor="phone">Phone Number:</label>
+                <label className={selectedInput === 'phone' ? 'selectedLabel' : ''} htmlFor="phone">Phone Number:</label>
                 <input 
                     type="tel" 
                     id="phone" 
@@ -48,7 +48,7 @@ export default function BookingForm(){
                 />
             </div>
             <div className="inputEl">
-                <label className={selectedInput === 'comments' && 'selectedLabel'} htmlFor="comments">Additional Comments:</label>
+                <label className={selectedInput === 'comments' ? 'selectedLabel' : ''} htmlFor="comments">Additional Comments:</label>
                 <textarea 
                     id="comments" 
                     name="comments" 

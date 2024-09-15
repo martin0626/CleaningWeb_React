@@ -1,8 +1,10 @@
+import React from "react";
 import BookingForm from "./BookingForm";
 
-export default function Booking(){
+
+const Booking = React.forwardRef((props, ref)=>{
     return(
-        <section className="booking">
+        <section ref={ref} className="booking">
             
             <div className="booking-content">
                 <div className="bookingImg">
@@ -12,4 +14,7 @@ export default function Booking(){
             </div>
         </section>             
     )
-}
+})
+
+
+export default Booking;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SingleProcess from "./SingleProcess";
 
 
@@ -28,7 +28,7 @@ const dummyProcesses = [
 ]
 
 
-export default function ProcessComp(){
+const ProcessComp = React.forwardRef((props, ref)=>{
     const [currentActive, setCurrentActive] = useState(-1);
 
     useEffect(() => {
@@ -43,15 +43,17 @@ export default function ProcessComp(){
     
 
     return(
-        <section className="process">
+        <section ref={ref} className="process">
             <div className="process-main">
                 <div className="process-header">
                     <h1 className="secondaryHeaderText">How it works</h1>
                 </div>
                 <div className="process-cards">
-                    {dummyProcesses.map((p, i)=><SingleProcess process={p} isActive={i === currentActive}/>)}
+                    {dummyProcesses.map((p, i)=><SingleProcess key={p.title} process={p} isActive={i === currentActive}/>)}
                 </div>
             </div>
         </section>
     )
-}
+});
+
+export default ProcessComp;

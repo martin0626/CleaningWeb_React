@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import SingleService from "./SingleService"
 
 const servicesDummy = [
@@ -16,7 +16,7 @@ const servicesDummy = [
         title: "Enhanced",
         descriptionShort: 'For our clients who want to go beyond our basic cleaning package to a near spotless home, we offer an enhanced cleaning service. This service includes everything in our basic cleaning package plus wet washing of many additional surfaces.',
         description: "For our clients who want to go beyond our basic cleaning package to a near spotless home, we offer an enhanced cleaning service. This service includes everything in our basic cleaning service plus the following enhanced services. We will wet wash accessible baseboards & trim, polish all furniture, wipe all home decor, wash all wall plates, switches and door knobs, wipe down ceiling fans, wash exterior cabinets in kitchens and bathrooms, clean exterior of toilets and change bed linens in the master bedroom. We will change linens in additional bedrooms for a small add-on fee, upon request.",
-        img: 'https://www.hoover-home.com/adapt-image/3160356/Come%20_pulire_strofinacci_730x590x?w=730&h=590&q=100&fm=jpg&version=1.0&t=1669893862697',
+        img: 'https://www.hoover-home.com/adapt-image/3160356/Come%20_pulire_strofinacci_730x590x?w=730&h=590&q=100&fm=jpg&version=1.0&t=1669893862697.jpg',
         imgAlt: 'Cleaned Living room',
         category: 'home',
     },
@@ -41,13 +41,12 @@ const servicesDummy = [
 ]
 
 
-
-export default function ServicesContainer(){
+const ServicesContainer = React.forwardRef((props, ref)=>{
     const [services, setServices] = useState(servicesDummy);
     
 
     return (
-        <section className="services">
+        <section ref={ref} className="services">
             <div className="services-header">
                 <h1 className="secondaryHeaderText">Featured Services</h1>
                 <p>Home Cleaning</p>
@@ -66,4 +65,6 @@ export default function ServicesContainer(){
 
         </section>
     )    
-};
+})
+
+export default ServicesContainer
