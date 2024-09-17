@@ -3,16 +3,6 @@ import RateComponent from "./Rate";
 
 export default function FooterSection({onOpenModal}){
 
-    // const handleCopy = (e)=>{
-    //     const data = e.target.textContent
-
-    //     navigator.clipboard.writeText(data).then(function() {
-    //         alert('Copied to clipboard!');
-    //     }).catch(function(error) {
-    //         console.error('Error copying text: ', error);
-    //     });
-    // }
-// handleCopy
     return(
         <section className="footer">
             <div className="footer-contacts">
@@ -50,7 +40,7 @@ export default function FooterSection({onOpenModal}){
             </div>
             <div className="footer-opinion footer-social">
                 <h2>Rate Us!</h2>
-                <p onClick={()=>onOpenModal(<RateComponent/>)} className="mainBtn"><span>Rate</span></p>
+                <p onClick={()=>onOpenModal(<RateComponent />)} className="mainBtn"><span>Rate</span></p>
             </div>
         </section>             
     ) 

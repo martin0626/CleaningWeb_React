@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function RateComponent(){
+export default function RateComponent({onClose}){
     const [stars, setStars ] = useState(0);
 
     const rateHandler = (n)=>{
@@ -15,6 +15,7 @@ export default function RateComponent(){
 
     return(
         <div className="rate">
+            
             <div className="rate-main">
                 <h2>Your opinion is important for Us!</h2>
                 <div className="rate-stars">
@@ -25,7 +26,7 @@ export default function RateComponent(){
                     }
                 </div>
                 <div className="rate-comment">
-                    <textarea rows='6'>
+                    <textarea rows='6' placeholder="Your opinion here...">
 
                     </textarea>
                 </div>

@@ -74,6 +74,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     &-main{
         display: flex;
@@ -132,3 +133,4 @@
         transform: rotate(360deg);
     }
 }
+
