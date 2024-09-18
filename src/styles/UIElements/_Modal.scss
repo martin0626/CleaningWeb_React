@@ -21,6 +21,8 @@
     border: none;
     padding: 6rem;
     box-shadow: $mainShodwsLight;
+    overflow-y: auto !important;
+
 
     @media (max-width:$breakpoint-medium){
         width: 100vw;
@@ -40,7 +42,7 @@
     z-index: 100012;
     background-color: $secondary-color;
     display: flex;
-    padding: 1rem;
+    padding: 0.4rem;
     border-radius: 50%;
     color: #fff;
     transition: all 0.3s;

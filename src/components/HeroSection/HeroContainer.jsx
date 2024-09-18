@@ -16,7 +16,7 @@ const HeroContainer = React.forwardRef((props, ref)=>{
             {
                 currentImg 
                     ?
-                <div className="background-img firstImg"></div>
+                <div className="background-img firstImg scaleEffect"></div>
                     :
                 <div className="background-img secondImg"></div>
             }

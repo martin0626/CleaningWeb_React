@@ -9,6 +9,8 @@
     color: $textColor;
     position: relative;
 
+    
+
     &-img{
         img{
             width: 100%;
@@ -24,6 +26,10 @@
 
         h1{
             text-align: center;
+        }
+
+        p {
+            font-size: 1rem;
         }
     }
 

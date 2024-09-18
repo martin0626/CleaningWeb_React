@@ -1,0 +1,14 @@
+.serviceDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+
+    p{
+        color: #333;
+        background-color: #f9f9f9;
+        padding: 2rem;
+        max-width: 80vw;
+        margin-bottom: 1.5em;
+    }
+}

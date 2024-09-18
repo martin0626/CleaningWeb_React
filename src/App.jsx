@@ -26,7 +26,6 @@ function App() {
       'book': bookingRef.current,
     }
 
-    debugger
 
 
     if(sectionMapper[section]){
@@ -44,7 +43,7 @@ function App() {
     setIsOpenModal(prevContent=>{
       return {...prevContent, content: content}
     });
-  }
+  };
 
   return (
     <>
@@ -54,7 +53,7 @@ function App() {
       <ContactReminder/>
       <Navigation onNavigate={handleNavigation}/>
       <HeroContainer ref={homeRef}/>
-      <ServicesContainer ref={servicesRef}/>
+      <ServicesContainer ref={servicesRef} onRead={handleOpenModal}/>
       <ProcessComp ref={processRef}/>
       <Booking ref={bookingRef}/>
       <FooterSection onOpenModal={handleOpenModal}/>

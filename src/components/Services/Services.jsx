@@ -41,10 +41,9 @@ const servicesDummy = [
 ]
 
 
-const ServicesContainer = React.forwardRef((props, ref)=>{
+const ServicesContainer = React.forwardRef(({onRead}, ref)=>{
     const [services, setServices] = useState(servicesDummy);
     
-
     return (
         <section ref={ref} className="services">
             <div className="services-header">
@@ -55,7 +54,7 @@ const ServicesContainer = React.forwardRef((props, ref)=>{
                 {
                     services.length > 0 
                         ?
-                        services.map(s=> <SingleService key={s.id} service={s}/>)
+                        services.map(s=> <SingleService onRead={onRead} key={s.id} service={s}/>)
                         :
                     <h1 className="secondaryHeaderText">No Feautured Services at this point...</h1>
             

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import ServiceDetails from "./ServiceDetails";
 
-export default function SingleService({service}){
+export default function SingleService({service, onRead}){
 
     const [ hoverEl, setHoverEl ] = useState(false);
 
@@ -22,9 +23,9 @@ export default function SingleService({service}){
             </div>
             <div className="singleService-text">
                 <h1 >{service.title}</h1>
-                <p>{service.descriptionShort}</p>
+                <p className="longText">{service.descriptionShort}</p>
             </div>
-            <p className={hoverEl ? 'singleAction singleActionVisible mainBtn' : 'singleAction mainBtn'}>
+            <p onClick={()=>onRead(<ServiceDetails service={service}/>)} className={hoverEl ? 'singleAction singleActionVisible mainBtn' : 'singleAction mainBtn'}>
                 <span>Learn More</span>
             </p>
         </div>
