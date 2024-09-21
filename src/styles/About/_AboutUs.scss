@@ -1,0 +1,40 @@
+.aboutUs {
+    margin: 12rem 6rem 24rem 6rem;
+
+    h1{
+        margin-bottom: 4rem;
+    }
+
+    &-main{
+        display: flex;
+        width: auto;
+        align-items: center;
+        gap: 2rem;
+        justify-content: center;
+
+
+        @media (max-width:'1335px'){
+            flex-direction: column;
+        } 
+    }
+
+    &-img{
+        img{
+            width: 100%;                /* Full width */
+            aspect-ratio: 16 / 9;       /* Aspect ratio of 16:9 */
+            object-fit: cover; 
+        }
+    }
+
+    &-text {
+        max-width: 32rem;
+        background-color: #ffffff4d;
+        padding: 2rem;
+        border-radius: 6px;
+
+
+        @media (max-width:'1335px'){
+            max-width: none;
+        } 
+    }
+}

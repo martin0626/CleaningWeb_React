@@ -7,6 +7,7 @@ import ProcessComp from "./components/ProcessSection/ProcessSection"
 import ServicesContainer from "./components/Services/Services"
 import ModalComponent from "./components/UI/Modal"
 import ContactReminder from "./components/UI/Concact"
+import AboutUs from "./components/About/AboutUs"
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
       <Navigation onNavigate={handleNavigation}/>
       <HeroContainer ref={homeRef}/>
       <ServicesContainer ref={servicesRef} onRead={handleOpenModal}/>
+      <AboutUs/>
       <ProcessComp ref={processRef}/>
       <Booking ref={bookingRef}/>
       <FooterSection onOpenModal={handleOpenModal}/>
