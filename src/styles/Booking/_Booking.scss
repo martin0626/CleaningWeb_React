@@ -16,11 +16,11 @@
         position: relative;
         display: flex;
         justify-content: end;
-        
+        max-width: 80rem;
         border-radius: 8px 200px 200px 200px;
         overflow: hidden;
         box-shadow: $mainShodws;
-
+        margin: 0 auto;
         @media (max-width:$breakpoint-medium){
             height: 100%;
         }

@@ -1,8 +1,8 @@
 export default function AboutUs(){
     return(
-        <section className="aboutUs">
+        <section className="aboutUs scrollEffectSurfaced">
             <h1 className="mainHeaderText">About Us</h1>
-            <div className="aboutUs-main">
+            <div className="aboutUs-main ">
                 <div className="aboutUs-img">
                     <img src="https://s.wsj.net/public/resources/images/RV-AJ626_FAMILY_P_20130208163130.jpg" alt="Image of our colegues..." />
                 </div>

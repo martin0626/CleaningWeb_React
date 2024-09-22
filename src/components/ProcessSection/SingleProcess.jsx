@@ -1,6 +1,6 @@
 export default function SingleProcess({process, isActive}){
     return(
-        <div className={isActive ? "singleProcess currentActive" : "singleProcess"}>
+        <div className={isActive ? "singleProcess currentActive scrollEffectSurfaced" : "singleProcess scrollEffectSurfaced"}>
             <div className="singleProcess-img">
                 <img src={process.img} alt={process.imgAlt} />
                 <p className='iconProcess'>

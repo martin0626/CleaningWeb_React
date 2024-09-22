@@ -4,7 +4,7 @@ import RateComponent from "./Rate";
 export default function FooterSection({onOpenModal}){
 
     return(
-        <section className="footer">
+        <section className="footer ">
             <div className="footer-contacts">
                 <h2>Contacts</h2>
                 <div onClick={handleCopy} className="footer-singleContact">

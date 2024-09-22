@@ -4,7 +4,7 @@ import BookingForm from "./BookingForm";
 
 const Booking = React.forwardRef((props, ref)=>{
     return(
-        <section ref={ref} className="booking">
+        <section ref={ref} className="booking scrollEffectScale">
             
             <div className="booking-content">
                 <div className="bookingImg">

@@ -17,7 +17,7 @@ export default function SingleService({service, onRead}){
 
     //Ideas From Here: https://www.thecleaningpeopleri.com/#1497525250156-d1f09a4f-37f2
     return (
-        <div onMouseOver={handleHover} onMouseOut={handleRemoveHover} key={service.id} className="singleService">
+        <div onMouseOver={handleHover} onMouseOut={handleRemoveHover} key={service.id} className="singleService scrollEffectSurfaced">
             <div className="singleService-img">
                 <img src={service.img} alt={service.imgAlt} />
             </div>
