@@ -67,11 +67,22 @@
 }
 
 .inputEl {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     transition: all 0.3s;
 
+    p{
+        transition: all 0.5s;
+        position: absolute;
+        top: -30%;
+        left: 0;
+        color: rgb(255, 164, 164);
+        font-weight: bold;
+        text-transform: capitalize;
+        width: auto;
+    }
     
     
     input, textarea{
