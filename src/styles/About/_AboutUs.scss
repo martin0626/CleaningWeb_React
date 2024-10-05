@@ -1,40 +1,54 @@
 .aboutUs {
     margin: 12rem 6rem 24rem 6rem;
 
+    @media (max-width:'600px'){
+        margin: 12rem 1rem 24rem 1rem;
+        
+    }
+
     h1{
         margin-bottom: 4rem;
     }
 
     &-main{
+        color: $textColor;
         display: flex;
         width: auto;
         align-items: center;
         gap: 2rem;
-        justify-content: center;
+        background-color: #fff;
+        border-radius: 8px 120px 120px 8px;
+        overflow: hidden;
+        max-width: 85rem;
+        margin: 0 auto;
+        box-shadow: $mainShodws;
 
-
-        @media (max-width:'1335px'){
+        @media (max-width:'1380px'){
             flex-direction: column;
+            border-radius: 8px 120px 8px 8px;
+            max-width: 70vw;
         } 
-    }
 
-    &-img{
+        @media (max-width:'600px'){
+            max-width: none;
+        } 
+
         img{
-            width: 100%;                /* Full width */
-            aspect-ratio: 16 / 9;       /* Aspect ratio of 16:9 */
+            height: 100%;  
+            width: 100%;
             object-fit: cover; 
         }
     }
 
     &-text {
-        max-width: 32rem;
-        background-color: #ffffff4d;
+        max-width: 42rem;
+        // background-color: #ffffff4d;
         padding: 2rem;
         border-radius: 6px;
-
+        justify-self: center;
 
         @media (max-width:'1335px'){
-            max-width: none;
+            // max-width: none;
         } 
     }
 }

@@ -5,13 +5,13 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.863);
-    z-index: 10000;
+    z-index: 1001;
 }
 
 .modal-content {
     position: fixed;
     border-radius: 8px;
-    z-index: 10001;
+    z-index: 1001;
     top:10%;
     left: 50%;
     width: 70vw;
@@ -22,6 +22,7 @@
     padding: 6rem;
     box-shadow: $mainShodwsLight;
     overflow-y: auto !important;
+    animation: fadeIn 0.5s ease-in-out;
 
 
     @media (max-width:$breakpoint-medium){
@@ -57,5 +58,17 @@
         cursor: pointer;
         background-color: $mainColor;
 
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%, 0);
     }
 }

@@ -11,7 +11,7 @@ export default function ModalComponent({children, onClose}){
                         close
                     </span>
                 </p>
-                {children}
+                {React.cloneElement(children, {onClose})}
             </div>
         </div>
     )

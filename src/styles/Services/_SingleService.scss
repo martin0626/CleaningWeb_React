@@ -1,13 +1,13 @@
 .singleService {
     margin-top: 2rem;
-    width: 100%;
-    height: 40rem;
+    max-width: 28rem;
     overflow: hidden;
     border-radius: 6px;
     color: #fff;
     box-shadow: $mainShodws;
     color: $textColor;
     position: relative;
+    justify-self: center;
 
     
 

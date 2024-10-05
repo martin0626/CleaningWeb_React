@@ -1,5 +1,6 @@
 import emailjs  from "@emailjs/browser";
-import { useRef, useState } from "react"
+import { useContext, useRef, useState } from "react"
+import { NotificationContext } from "../../App";
 
 
 
@@ -69,6 +70,7 @@ const emailSender = (formElmemnt)=>{
 
 
 export default function BookingForm(){
+    const { setNotificationHandler } = useContext(NotificationContext);
     const [selectedInput, setSelectedInput] = useState('');
     const [errors, setErrors] = useState({
         email: false,
@@ -78,10 +80,6 @@ export default function BookingForm(){
     })
 
     const formRef = useRef();
-
-
-
-    
 
     
 
@@ -117,17 +115,22 @@ export default function BookingForm(){
 
         const errorsFound = errorHandlers(data.user_email, data.user_name, data.phone)
         
-        debugger
+        
         if(Object.values(errorsFound).some(e=> e != false)){
             setErrors(errorsFound);
             return;
         };
 
+        setErrors(errorsFound);
         const emailSended = emailSender(formRef.current);
+        
 
         if(!emailSended){
-            console.log("ASD");
-            
+            setNotificationHandler('Thank you! We are going to contact you as soon as possible.', 'Success', 3000);
+            formRef.current.reset();
+        }else{
+            setNotificationHandler('Something went wrong!\nPlease call us through mobile Phone.', 'Error', 3000);
+            formRef.current.reset();
         }
     }
 

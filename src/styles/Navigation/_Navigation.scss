@@ -110,7 +110,7 @@
   top: 100%;
   width: 104%;
   left: 0;
-  align-items: end;
+  align-items: center;
   transition: all 0.5s;
   display: none;
 
@@ -130,7 +130,11 @@
     a{
       transition: all 0.5s;
       position: relative;
-      margin-right: 2rem;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #3333333f;
+      padding-bottom: 1rem;
+      // margin-right: 2rem;
 
 
       &::after{

@@ -4,16 +4,12 @@ $mainColorLight: #009675;
 
 $textColor: #006b54;
 $textHoverColor: #666666c0;
-
-
-
-$primary-color: #72c7ff;    /* Bright Blue */
-
-// $primary-color: #3AB0FF;    /* Bright Blue */
-$secondary-color: #00C49A;  /* Fresh Green */
-$accent-color: #FFD700;     /* Sunny Yellow */
+$secondary-color: #00C49A;  
 $background-color: #F5F5F5; /* Light Grey */
-$neutral-color: #b0bec58a;    /* Soft Grey */
+
+    
+$errColor: rgba(255, 62, 62, 0.973); 
+
 
 
 
@@ -34,3 +30,4 @@ $mainShodwsLight: 0px 0px 12px 0px #e4e4e463;
 
 // Font Family
 $headersFamily: "Playfair Display", serif;
+

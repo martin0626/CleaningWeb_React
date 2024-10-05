@@ -1,13 +1,24 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { NotificationContext } from "../../App";
 
 export default function RateComponent({onClose}){
     const [stars, setStars ] = useState(0);
+    const { setNotificationHandler } = useContext(NotificationContext);
 
     const rateHandler = (n)=>{
         if(n == stars){
             setStars(0);
         }else{
             setStars(n);
+        }
+    };
+
+    const submitHandler = ()=>{
+        if(stars > 0){
+            setNotificationHandler('Successfully gave your Rate!', 'Success', 3000);
+            onClose()
+        }else{
+            setNotificationHandler('Please choose Rating', 'Error', 1500)
         }
     }
 
@@ -27,11 +38,10 @@ export default function RateComponent({onClose}){
                 </div>
                 <div className="rate-comment">
                     <textarea rows='6' placeholder="Your opinion here...">
-
                     </textarea>
                 </div>
             </div>
-            <p className="mainBtn"><span>Submit</span></p>
+            <p className="mainBtn" onClick={submitHandler}><span>Submit</span></p>
         </div>
     )
 }
