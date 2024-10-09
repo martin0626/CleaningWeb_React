@@ -21,7 +21,7 @@ export default function Navigation({onNavigate}) {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY) {
+    if (currentScrollY > lastScrollY && currentScrollY > 700) {
       // Scrolling down
       setVsisibleNav(false);
     } else {

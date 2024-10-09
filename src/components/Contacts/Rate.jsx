@@ -15,10 +15,10 @@ export default function RateComponent({onClose}){
 
     const submitHandler = ()=>{
         if(stars > 0){
-            setNotificationHandler('Successfully gave your Rate!', 'Success', 3000);
+            setNotificationHandler(['Successfully gave your Rate!'], 'Success', 3000);
             onClose()
         }else{
-            setNotificationHandler('Please choose Rating', 'Error', 1500)
+            setNotificationHandler(['Please choose Rating'], 'Error', 1500)
         }
     }
 

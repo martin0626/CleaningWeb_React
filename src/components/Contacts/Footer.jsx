@@ -8,7 +8,7 @@ export default function FooterSection({onOpenModal}){
     const onCopyHandler = (e)=>{
         const data = e.target.textContent;
         navigator.clipboard.writeText(data)
-        setNotificationHandler('You copy this contact!', 'Success')
+        setNotificationHandler(['You copy this contact!'], 'Success')
     }
 
     return(

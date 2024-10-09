@@ -18,15 +18,15 @@ export const NotificationContext = createContext();
 function App() {
 
   //Notifications Context Controller
-  const [notification, setNotification] = useState({message: undefined, status: undefined});
+  const [notification, setNotification] = useState({messages: undefined, status: undefined});
   const timeoutRef = useRef(null);
 
 
-  const setNotificationHandler = (message, status, time=1000)=>{
+  const setNotificationHandler = (messages, status, time=1000)=>{
     
 
     // Clear the previous timeout if it exists
-    setNotification({message, status});
+    setNotification({messages, status});
 
     
     if (timeoutRef.current) {
@@ -42,7 +42,7 @@ function App() {
 
 
   const clearNotification = ()=>{
-    setNotification({message: undefined, status: undefined});
+    setNotification({messages: undefined, status: undefined});
   }
 
   //Navigation Refernces
@@ -87,7 +87,7 @@ function App() {
         
         {
           // Checking if Notificatio is Active
-          notification.message && <NotificationComponent message={notification.message} status={notification.status}/>
+          notification.messages && <NotificationComponent messages={notification.messages} status={notification.status}/>
         }
         
       <NotificationContext.Provider value={{setNotificationHandler}}>

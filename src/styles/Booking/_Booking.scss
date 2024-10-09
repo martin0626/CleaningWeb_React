@@ -23,6 +23,7 @@
         margin: 0 auto;
         @media (max-width:$breakpoint-medium){
             height: 100%;
+            margin-inline: 1rem;
         }
     }
 

@@ -1,4 +1,7 @@
-export default function NotificationComponent({message, status}){
+export default function NotificationComponent({messages, status}){
+    console.log(messages);
+    
+
     return(
         <div className={ status === 'Success' ? "notification success" : "notification err"}> 
             <div className="notification-icon">
@@ -11,7 +14,9 @@ export default function NotificationComponent({message, status}){
             </span>
             </div>
             <div className="notification-text">
-                <p>{message}</p>
+                {messages.map(m=>
+                    <p>{m}</p>
+                )}
             </div>
         </div>
     )

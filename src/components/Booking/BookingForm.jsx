@@ -126,10 +126,10 @@ export default function BookingForm(){
         
 
         if(!emailSended){
-            setNotificationHandler('Thank you! We are going to contact you as soon as possible.', 'Success', 3000);
+            setNotificationHandler(['Thank you!', 'We are going to contact you as soon as possible.'], 'Success', 3000);
             formRef.current.reset();
         }else{
-            setNotificationHandler('Something went wrong!\nPlease call us through mobile Phone.', 'Error', 3000);
+            setNotificationHandler(['Something went wrong!', 'Please call us through mobile Phone.'], 'Error', 3000);
             formRef.current.reset();
         }
     }
