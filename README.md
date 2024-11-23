@@ -1,8 +1,5 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my Home Cleaning single page web 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can check demo project here: [DEMO](https://familycleaning-1e90f.web.app/?fbclid=IwY2xjawGu1VRleHRuA2FlbQIxMAABHcFEnVtgGDjf8UjK05BC9pIw_RsuI7nAdxWH_JA8D3A4dKYa2Y4yYelFsw_aem_WTAXWOcml2P_uzByBgI4tQ)
